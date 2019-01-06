@@ -16,7 +16,7 @@ def read_config(config_path, defaults):
 
 
 def strip_config(config, allowed_keys):
-    return {k: v for k, v in config.iteritems() if k in allowed_keys and v}
+    return {k: v for k, v in config.items() if k in allowed_keys and v}
 
 
 class Config:
