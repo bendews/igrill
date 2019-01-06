@@ -34,7 +34,7 @@ class Config:
         specs = config_requirements['specs']
         required_entries = specs.get('required_entries', {})
         optional_entries = specs.get('optional_entries', {})
-        config_dict = strip_config(config_dict, required_entries.keys() + optional_entries.keys())
+        config_dict = strip_config(config_dict, list(required_entries) + list(optional_entries))
 
         logging.debug("Validating dict {0} with specs: {1}".format(config_dict, specs))
         valid = True
