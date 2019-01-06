@@ -29,7 +29,7 @@ class UUIDS:
 
 
 class IDevicePeripheral(btle.Peripheral):
-    encryption_key = None
+    encryption_key = []
     btle_lock = threading.Lock()
 
     def __init__(self, address, name):
